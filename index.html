@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Delhi Queen - Premium Men's Wear Manufacturer in Tilak Nagar, Delhi. Kurta Pajama, Sherwanis, Suits, Shirts, Jeans & T-Shirts. Wholesale & Retail.">
-    <meta name="keywords" content="Delhi Queen, Tilak Nagar, Mens Wear, Kurta Pajama, Sherwani, Suits, Wholesale, Delhi">
-    <title>Delhi Queen - Premium Men's Wear | Tilak Nagar, Delhi</title>
+    <meta name="description" content="Delhi Queen - Premium Men's Wear Manufacturer in Tilak Nagar, Delhi. Kurta Pajama, Sherwanis, Suits, Shirts, Jeans & T-Shirts. Wholesale & Retail. Direct from Factory.">
+    <meta name="keywords" content="Delhi Queen, Tilak Nagar, Mens Wear Delhi, Kurta Pajama, Sherwani, Suits, Wholesale Menswear, Vikas Puri, Wedding Sherwani Delhi">
+    <title>Delhi Queen - Premium Men's Wear Manufacturer | Tilak Nagar, Delhi</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
@@ -17,12 +41,17 @@
         nav a { color: white; text-decoration: none; margin-left: 2rem; font-weight: 500; transition: color 0.3s; }
         nav a:hover { color: #ffd700; }
         
+        /* WhatsApp Floating Button */
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 100; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4); }
+        
         /* Hero Section */
         .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=1200') center/cover; color: white; text-align: center; padding: 8rem 20px; }
         .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
         .hero p { font-size: 1.3rem; margin-bottom: 2rem; }
-        .cta-button { display: inline-block; background: #ffd700; color: #1e3c72; padding: 1rem 2.5rem; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem; transition: transform 0.3s, box-shadow 0.3s; }
+        .cta-button { display: inline-block; background: #ffd700; color: #1e3c72; padding: 1rem 2.5rem; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem; transition: transform 0.3s, box-shadow 0.3s; margin: 0.5rem; }
         .cta-button:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,215,0,0.3); }
+        .cta-button.secondary { background: white; color: #1e3c72; }
         
         /* Offer Banner */
         .offer-banner { background: #ff6b6b; color: white; text-align: center; padding: 1.5rem; font-size: 1.3rem; font-weight: bold; animation: pulse 2s infinite; }
@@ -38,7 +67,9 @@
         .product-info { padding: 1.5rem; }
         .product-info h3 { color: #1e3c72; margin-bottom: 0.5rem; font-size: 1.5rem; }
         .product-info p { color: #666; margin-bottom: 1rem; }
-        .price { color: #ff6b6b; font-size: 1.3rem; font-weight: bold; }
+        .price { color: #ff6b6b; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem; }
+        .order-btn { display: block; background: #25d366; color: white; text-align: center; padding: 0.8rem; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.3s; }
+        .order-btn:hover { background: #128c7e; }
         
         /* Features Section */
         .features { background: #f8f9fa; padding: 4rem 20px; }
@@ -47,32 +78,66 @@
         .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
         .feature-card h3 { color: #1e3c72; margin-bottom: 0.5rem; }
         
+        /* Order Form Section */
+        .order-form-section { max-width: 800px; margin: 4rem auto; padding: 0 20px; }
+        .order-form { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: #1e3c72; font-weight: bold; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #1e3c72; }
+        .submit-btn { background: #1e3c72; color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; width: 100%; transition: background 0.3s; }
+        .submit-btn:hover { background: #2a5298; }
+        
+        /* Size Guide */
+        .size-guide { max-width: 1200px; margin: 4rem auto; padding: 0 20px; }
+        .size-table { width: 100%; border-collapse: collapse; margin-top: 2rem; background: white; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .size-table th, .size-table td { padding: 1rem; text-align: center; border: 1px solid #ddd; }
+        .size-table th { background: #1e3c72; color: white; }
+        
+        /* Reviews Section */
+        .reviews { background: #f8f9fa; padding: 4rem 20px; }
+        .reviews-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .review-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .review-stars { color: #ffd700; font-size: 1.5rem; margin-bottom: 1rem; }
+        .review-text { color: #666; margin-bottom: 1rem; font-style: italic; }
+        .review-author { color: #1e3c72; font-weight: bold; }
+        
         /* Contact Section */
         .contact { max-width: 1200px; margin: 4rem auto; padding: 0 20px; }
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .contact-card { background: #1e3c72; color: white; padding: 2rem; border-radius: 15px; text-align: center; }
         .contact-card h3 { margin-bottom: 1rem; font-size: 1.5rem; }
-        .contact-card a { color: #ffd700; text-decoration: none; font-size: 1.2rem; }
+        .contact-card a { color: #ffd700; text-decoration: none; font-size: 1.2rem; word-break: break-all; }
+        .contact-card p { margin: 0.5rem 0; }
         
         /* Footer */
         footer { background: #1e3c72; color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
+        footer a { color: #ffd700; text-decoration: none; }
         
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
             .hero p { font-size: 1rem; }
             nav { width: 100%; margin-top: 1rem; }
-            nav a { margin: 0 1rem; }
+            nav a { margin: 0 1rem; font-size: 0.9rem; }
+            .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; font-size: 25px; }
         }
     </style>
 </head>
 <body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919971168358?text=Hi%20Delhi%20Queen!%20I%20want%20to%20order" class="whatsapp-float" target="_blank" title="Order on WhatsApp">
+        💬
+    </a>
+
     <header>
         <div class="header-content">
             <div class="logo">👑 DELHI QUEEN</div>
             <nav>
                 <a href="#products">Products</a>
-                <a href="#about">About</a>
+                <a href="#order">Order Now</a>
+                <a href="#size-guide">Size Guide</a>
+                <a href="#reviews">Reviews</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -85,7 +150,8 @@
     <section class="hero">
         <h1>Premium Men's Wear Manufacturer</h1>
         <p>Direct from Factory | Best Wholesale & Retail Prices | Tilak Nagar, Delhi</p>
-        <a href="#contact" class="cta-button">Order Now - Free Delivery</a>
+        <a href="https://wa.me/919971168358?text=Hi%20Delhi%20Queen!%20I%20want%20to%20order" class="cta-button">Order on WhatsApp</a>
+        <a href="tel:+919971168358" class="cta-button secondary">Call Now: +91 99711 68358</a>
     </section>
 
     <section class="products" id="products">
@@ -95,8 +161,9 @@
                 <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c5ed7b80-c30d-4a95-a1d8-a244de09c845/2025-12-02T10-06-44-189Z-48b08f69-nano-banana-pro_1764670004048.jpg" alt="Kurta Pajama" class="product-image">
                 <div class="product-info">
                     <h3>Premium Kurta Pajama</h3>
-                    <p>Elegant designs with intricate embroidery. Perfect for weddings & festivals.</p>
-                    <div class="price">Starting ₹1,499</div>
+                    <p>Elegant designs with intricate embroidery. Perfect for weddings & festivals. Available in multiple colors.</p>
+                    <div class="price">₹1,499 - ₹3,999</div>
+                    <a href="https://wa.me/919971168358?text=I%20want%20to%20order%20Kurta%20Pajama" class="order-btn">Order Now</a>
                 </div>
             </div>
 
@@ -104,8 +171,9 @@
                 <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c5ed7b80-c30d-4a95-a1d8-a244de09c845/2025-12-02T10-06-59-849Z-175aaf55-nano-banana-pro_1764670019767.jpg" alt="Sherwani" class="product-image">
                 <div class="product-info">
                     <h3>Wedding Sherwani</h3>
-                    <p>Luxurious sherwanis with golden zari work. Make your special day memorable.</p>
-                    <div class="price">Starting ₹4,999</div>
+                    <p>Luxurious sherwanis with golden zari work. Make your special day memorable. Custom fitting available.</p>
+                    <div class="price">₹4,999 - ₹15,999</div>
+                    <a href="https://wa.me/919971168358?text=I%20want%20to%20order%20Wedding%20Sherwani" class="order-btn">Order Now</a>
                 </div>
             </div>
 
@@ -113,8 +181,9 @@
                 <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c5ed7b80-c30d-4a95-a1d8-a244de09c845/2025-12-02T10-07-14-920Z-990cfc36-nano-banana-pro_1764670034827.jpg" alt="Formal Suit" class="product-image">
                 <div class="product-info">
                     <h3>Formal Coat Pant</h3>
-                    <p>Perfectly tailored suits for the corporate gentleman. Sharp & professional.</p>
-                    <div class="price">Starting ₹3,499</div>
+                    <p>Perfectly tailored suits for the corporate gentleman. Sharp, professional & comfortable.</p>
+                    <div class="price">₹3,499 - ₹8,999</div>
+                    <a href="https://wa.me/919971168358?text=I%20want%20to%20order%20Formal%20Suit" class="order-btn">Order Now</a>
                 </div>
             </div>
 
@@ -122,8 +191,9 @@
                 <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c5ed7b80-c30d-4a95-a1d8-a244de09c845/2025-12-02T10-07-34-339Z-6bde917b-nano-banana-pro_1764670054252.jpg" alt="Casual Wear" class="product-image">
                 <div class="product-info">
                     <h3>Casual Collection</h3>
-                    <p>Trendy jeans, shirts & t-shirts. BUY 2 GET 1 FREE offer!</p>
-                    <div class="price">Starting ₹499</div>
+                    <p>Trendy jeans, shirts & t-shirts. BUY 2 GET 1 FREE offer! Latest fashion trends.</p>
+                    <div class="price">₹499 - ₹1,999</div>
+                    <a href="https://wa.me/919971168358?text=I%20want%20to%20order%20Casual%20Wear" class="order-btn">Order Now</a>
                 </div>
             </div>
         </div>
@@ -159,8 +229,108 @@
             </div>
             <div class="feature-card">
                 <div class="feature-icon">⭐</div>
-                <h3>Trusted Since Years</h3>
+                <h3>Trusted Brand</h3>
                 <p>Serving Tilak Nagar community with pride</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="order-form-section" id="order">
+        <h2 class="section-title">Quick Order Form</h2>
+        <form class="order-form" action="https://wa.me/919971168358" method="get">
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="product">Product Category *</label>
+                <select id="product" name="product" required>
+                    <option value="">Select Product</option>
+                    <option value="Kurta Pajama">Kurta Pajama</option>
+                    <option value="Sherwani">Wedding Sherwani</option>
+                    <option value="Formal Suit">Formal Coat Pant</option>
+                    <option value="Casual Wear">Casual Wear (Jeans/Shirts/T-Shirts)</option>
+                    <option value="Wholesale Inquiry">Wholesale Inquiry</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Additional Details</label>
+                <textarea id="message" name="message" rows="4" placeholder="Size, color preferences, quantity, etc."></textarea>
+            </div>
+            <button type="submit" class="submit-btn" onclick="sendWhatsApp(event)">Send Order via WhatsApp</button>
+        </form>
+    </section>
+
+    <section class="size-guide" id="size-guide">
+        <h2 class="section-title">Size Guide & Measurements</h2>
+        <table class="size-table">
+            <thead>
+                <tr>
+                    <th>Size</th>
+                    <th>Chest (inches)</th>
+                    <th>Waist (inches)</th>
+                    <th>Length (inches)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>S</td>
+                    <td>36-38</td>
+                    <td>30-32</td>
+                    <td>28-29</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>38-40</td>
+                    <td>32-34</td>
+                    <td>29-30</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>40-42</td>
+                    <td>34-36</td>
+                    <td>30-31</td>
+                </tr>
+                <tr>
+                    <td>XL</td>
+                    <td>42-44</td>
+                    <td>36-38</td>
+                    <td>31-32</td>
+                </tr>
+                <tr>
+                    <td>XXL</td>
+                    <td>44-46</td>
+                    <td>38-40</td>
+                    <td>32-33</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: center; margin-top: 2rem; color: #666;">
+            <strong>Note:</strong> Custom sizes available. Visit our store for accurate measurements or contact us on WhatsApp.
+        </p>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Best quality sherwanis in Delhi! Got my wedding sherwani from Delhi Queen. Perfect fit and amazing embroidery work. Highly recommended!"</p>
+                <p class="review-author">- Rahul Sharma, Vikas Puri</p>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Great wholesale rates! We've been buying from Delhi Queen for our boutique. Quality is consistent and delivery is always on time."</p>
+                <p class="review-author">- Priya Fashion Store, Janakpuri</p>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Excellent customer service! They helped me choose the perfect kurta for Diwali. The fabric quality is outstanding. Will definitely buy again!"</p>
+                <p class="review-author">- Amit Kumar, Tilak Nagar</p>
             </div>
         </div>
     </section>
@@ -170,17 +340,22 @@
         <div class="contact-grid">
             <div class="contact-card">
                 <h3>📍 Store Location</h3>
-                <p>Delhi Queen<br>Tilak Nagar, Delhi<br>Near Vikas Puri Metro</p>
+                <p><strong>Delhi Queen</strong></p>
+                <p>11/14-B Tilak Nagar</p>
+                <p>New Delhi - 110018</p>
+                <p style="margin-top: 1rem;">Near Vikas Puri Metro</p>
             </div>
             <div class="contact-card">
                 <h3>📞 Call Us</h3>
-                <p><a href="tel:+919999999999">+91 99999 99999</a></p>
-                <p>Mon-Sun: 10 AM - 9 PM</p>
+                <p><a href="tel:+919971168358">+91 99711 68358</a></p>
+                <p style="margin-top: 1rem;">Mon-Sun: 10 AM - 9 PM</p>
+                <p>Quick Response Guaranteed!</p>
             </div>
             <div class="contact-card">
                 <h3>💬 WhatsApp Order</h3>
-                <p><a href="https://wa.me/919999999999" target="_blank">Click to Order on WhatsApp</a></p>
-                <p>Quick Response Guaranteed!</p>
+                <p><a href="https://wa.me/919971168358" target="_blank">+91 99711 68358</a></p>
+                <p style="margin-top: 1rem;">📧 Email</p>
+                <p><a href="mailto:sandeepkumar9217@gmail.com">sandeepkumar9217@gmail.com</a></p>
             </div>
         </div>
     </section>
@@ -188,6 +363,54 @@
     <footer>
         <p>&copy; 2024 Delhi Queen - Premium Men's Wear Manufacturer | Tilak Nagar, Delhi</p>
         <p>Kurta Pajama | Sherwanis | Suits | Shirts | Jeans | T-Shirts | Wholesale & Retail</p>
+        <p style="margin-top: 1rem;">
+            <a href="#products">Products</a> | 
+            <a href="#order">Order</a> | 
+            <a href="#size-guide">Size Guide</a> | 
+            <a href="#contact">Contact</a>
+        </p>
     </footer>
+
+    <script>
+        function sendWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const product = document.getElementById('product').value;
+            const message = document.getElementById('message').value;
+            
+            const text = `Hi Delhi Queen! I want to order:\n\nName: ${name}\nPhone: ${phone}\nProduct: ${product}\nDetails: ${message}`;
+            const whatsappUrl = `https://wa.me/919971168358?text=${encodeURIComponent(text)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Track WhatsApp clicks
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'whatsapp_click', {
+                        'event_category': 'engagement',
+                        'event_label': this.textContent
+                    });
+                }
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Contact');
+                }
+            });
+        });
+        
+        // Track phone clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'phone_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'Phone Call'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
