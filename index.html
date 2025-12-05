@@ -66,9 +66,44 @@
         .offer-banner { background: #ff6b6b; color: white; text-align: center; padding: 1.5rem; font-size: 1.3rem; font-weight: bold; animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
         
+        /* Section Styles */
+        .section { max-width: 1200px; margin: 4rem auto; padding: 0 20px; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #1e3c72; }
+        .section-content { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+        
+        /* About Section */
+        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .about-card { background: #f8f9fa; padding: 2rem; border-radius: 15px; text-align: center; }
+        .about-card h3 { color: #1e3c72; margin-bottom: 1rem; font-size: 1.5rem; }
+        .about-icon { font-size: 3rem; margin-bottom: 1rem; }
+        
+        /* Timeline */
+        .timeline { position: relative; padding: 2rem 0; }
+        .timeline-item { padding: 2rem; background: #f8f9fa; margin-bottom: 2rem; border-radius: 15px; border-left: 5px solid #1e3c72; }
+        .timeline-year { color: #ffd700; font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .timeline-content { color: #666; }
+        
+        /* FAQ Section */
+        .faq-item { background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.3s; }
+        .faq-item:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .faq-question { color: #1e3c72; font-weight: bold; font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .faq-answer { color: #666; display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #ddd; }
+        .faq-item.active .faq-answer { display: block; }
+        
+        /* Blog Section */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .blog-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .blog-card:hover { transform: translateY(-10px); }
+        .blog-image { width: 100%; height: 200px; object-fit: cover; }
+        .blog-content { padding: 1.5rem; }
+        .blog-title { color: #1e3c72; font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .blog-date { color: #999; font-size: 0.9rem; margin-bottom: 1rem; }
+        .blog-excerpt { color: #666; margin-bottom: 1rem; }
+        .read-more { color: #1e3c72; font-weight: bold; text-decoration: none; }
+        .read-more:hover { color: #ffd700; }
+        
         /* Products Section */
         .products { max-width: 1200px; margin: 4rem auto; padding: 0 20px; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #1e3c72; }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         .product-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
         .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
@@ -161,10 +196,11 @@
                 <div class="since">Serving Since 1977</div>
             </div>
             <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
                 <a href="#products">Products</a>
-                <a href="#order">Order Now</a>
-                <a href="#size-guide">Size Guide</a>
-                <a href="#reviews">Reviews</a>
+                <a href="#blog">Blog</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -174,12 +210,68 @@
         🎉 GRAND WINTER SALE - FLAT 30% OFF ON ALL PRODUCTS! 🎉
     </div>
 
-    <section class="hero">
+    <section class="hero" id="home">
         <h1>Delhi Queen</h1>
         <div class="subtitle">The First Choice Since 1977</div>
         <p>Premium Men's Wear Manufacturer | Direct from Factory | Best Wholesale & Retail Prices</p>
         <a href="https://wa.me/919971168358?text=Hi%20Delhi%20Queen!%20I%20want%20to%20order" class="cta-button">Order on WhatsApp</a>
         <a href="tel:+919971168358" class="cta-button secondary">Call Now: +91 99711 68358</a>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">About Delhi Queen</h2>
+        <div class="section-content">
+            <p style="font-size: 1.2rem; text-align: center; color: #666; margin-bottom: 2rem;">
+                For nearly five decades, Delhi Queen has been synonymous with quality, trust, and excellence in men's fashion. What started as a small shop in Tilak Nagar in 1977 has grown into one of Delhi's most trusted names in men's wear manufacturing and retail.
+            </p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-icon">🏆</div>
+                <h3>47+ Years of Excellence</h3>
+                <p>Since 1977, we've been serving three generations of customers with unwavering commitment to quality and style.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">👨‍👩‍👦</div>
+                <h3>Family Legacy</h3>
+                <p>A family-run business that treats every customer like family. Personal attention and care in every interaction.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">🏭</div>
+                <h3>Manufacturing Excellence</h3>
+                <p>We manufacture our own products, ensuring quality control at every step and offering unbeatable prices.</p>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <h3 style="text-align: center; color: #1e3c72; margin-bottom: 2rem; font-size: 2rem;">Our Journey</h3>
+            <div class="timeline-item">
+                <div class="timeline-year">1977</div>
+                <div class="timeline-content">
+                    <strong>The Beginning:</strong> Delhi Queen was founded in Tilak Nagar with a vision to provide quality men's wear at honest prices. Started with traditional ethnic wear.
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">1990s</div>
+                <div class="timeline-content">
+                    <strong>Expansion:</strong> Expanded into formal wear and established our own manufacturing unit. Became a trusted name for wedding sherwanis in West Delhi.
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2000s</div>
+                <div class="timeline-content">
+                    <strong>Wholesale Growth:</strong> Started wholesale operations, partnering with retailers across Delhi NCR. Introduced casual wear collection.
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-content">
+                    <strong>Digital Transformation:</strong> Launched our online presence, bringing 47 years of trust to the digital world. Now serving customers across India!
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="legacy">
@@ -256,6 +348,117 @@
                     <div class="wholesale-note">Wholesale: Min 50 pieces</div>
                     <a href="https://wa.me/919971168358?text=I%20want%20to%20order%20T-Shirts" class="order-btn">Order Now</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section" id="blog">
+        <h2 class="section-title">Fashion Tips & Updates</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400" alt="Blog" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">How to Choose the Perfect Wedding Sherwani</h3>
+                    <p class="blog-date">December 2024</p>
+                    <p class="blog-excerpt">Your wedding day is special, and your outfit should be too. Here's our expert guide to choosing the perfect sherwani that makes you look like royalty...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=400" alt="Blog" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">5 Essential Kurta Styles Every Man Should Own</h3>
+                    <p class="blog-date">November 2024</p>
+                    <p class="blog-excerpt">From casual to festive, kurtas are versatile and timeless. Discover the 5 must-have kurta styles that work for every occasion...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400" alt="Blog" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">Formal Wear Guide: Dressing for Success</h3>
+                    <p class="blog-date">November 2024</p>
+                    <p class="blog-excerpt">First impressions matter in the corporate world. Learn how to dress sharp and professional with our comprehensive formal wear guide...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">📦 Do you offer home delivery?</div>
+            <div class="faq-answer">
+                Yes! We offer FREE home delivery in Tilak Nagar and Vikas Puri areas. For other locations in Delhi NCR, delivery charges may apply. You can also order via WhatsApp at +91 99711 68358.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">💰 What are your wholesale rates?</div>
+            <div class="faq-answer">
+                We offer competitive wholesale rates for bulk orders. Minimum order quantity is 50 pieces per category. Contact us at +91 99711 68358 for detailed wholesale pricing and catalogs.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">✂️ Do you provide custom tailoring?</div>
+            <div class="faq-answer">
+                Absolutely! We provide expert custom tailoring services. Visit our store for accurate measurements, or share your measurements via WhatsApp. Perfect fit guaranteed!
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">🔄 What is your return/exchange policy?</div>
+            <div class="faq-answer">
+                We accept returns and exchanges within 7 days of purchase if the product is unused and in original condition with tags. Custom-tailored items are non-returnable.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">⏰ What are your store timings?</div>
+            <div class="faq-answer">
+                We're open Monday to Sunday from 10:00 AM to 9:00 PM. You can also order online 24/7 via our website or WhatsApp.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">💳 What payment methods do you accept?</div>
+            <div class="faq-answer">
+                We accept Cash, UPI, Credit/Debit Cards, Net Banking, and all major digital wallets. For online orders, you can pay via UPI or bank transfer.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">📏 How do I know my size?</div>
+            <div class="faq-answer">
+                Check our size guide section on this page for detailed measurements. If you're unsure, visit our store for professional measurement, or contact us on WhatsApp for guidance.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">🎁 Do you offer gift wrapping?</div>
+            <div class="faq-answer">
+                Yes! We provide complimentary gift wrapping for all purchases. Perfect for gifting on special occasions!
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">🚗 Is parking available at your store?</div>
+            <div class="faq-answer">
+                Yes, parking space is available near our store in Tilak Nagar. We're also easily accessible via Vikas Puri Metro station.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">📞 How can I contact customer support?</div>
+            <div class="faq-answer">
+                You can reach us via WhatsApp/Call at +91 99711 68358, email us at sandeepkumar9217@gmail.com, or visit our store at 11/14-B Tilak Nagar, New Delhi - 110018.
             </div>
         </div>
     </section>
@@ -428,9 +631,11 @@
         <p>11/14-B Tilak Nagar, New Delhi - 110018</p>
         <p>Kurta Pajama | Sherwanis | Suits | Shirts | Jeans | T-Shirts | Wholesale & Retail</p>
         <p style="margin-top: 1rem;">
+            <a href="#home">Home</a> | 
+            <a href="#about">About</a> | 
             <a href="#products">Products</a> | 
-            <a href="#order">Order</a> | 
-            <a href="#size-guide">Size Guide</a> | 
+            <a href="#blog">Blog</a> | 
+            <a href="#faq">FAQ</a> | 
             <a href="#contact">Contact</a> |
             <a href="https://www.facebook.com/share/1G8c55eJZc/" target="_blank">Facebook</a>
         </p>
